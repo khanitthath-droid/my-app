@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return "ยินดีเข้าสู่เว็บไซต์ของฉัน <a href='" . route('login'). "'>Login</a>";
+    return "ยินดีเข้าสู่เว็บไซต์ของฉัน <a href='" . route('login') . "'>Login</a>";
 });
 
 Route::get('about', function () {
@@ -11,7 +11,7 @@ Route::get('about', function () {
 });
 
 Route::get('blog/{id}', function ($id) {
-    return "บทความทั้งหมด".$id;
+    return "บทความทั้งหมด" . $id;
 });
 
 Route::get('admin/user/da', function () {
@@ -20,4 +20,12 @@ Route::get('admin/user/da', function () {
 
 Route::get('fallback', function () {
     return "ไม่พบหน้า";
+});
+
+Route::get('abouts', function () {
+    return "เกี่ยวกับเรา";
+});
+
+Route::get('blogs/{id}', function ($id) {
+    return "บทความทั้งหมด" . $id;
 });
